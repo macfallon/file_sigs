@@ -1,1 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileTypeList version="2.0">
+    <FileType id="50001" group="Forensic Recovery" description="Bitcoin Wallets (2011-2013)" features="" extension="dat">
+        <Begin combine="OR">
+            <Signature>\x61\x15\x06\x00</Signature>
+            <Signature>\x00\x06\x15\x61</Signature>
+            <Signature>\x62\x31\x05\x00</Signature>
+            <Signature>\x00\x05\x31\x62</Signature>
 
+            <Signature offset="12">\x61\x15\x06\x00</Signature>
+            <Signature offset="12">\x00\x06\x15\x61</Signature>
+            <Signature offset="12">\x62\x31\x05\x00</Signature>
+            <Signature offset="12">\x00\x05\x31\x62</Signature>
+            <Signature offset="12">\x53\x22\x04\x00</Signature>
+            <Signature offset="12">\x00\x04\x22\x53</Signature>
+            <Signature offset="12">\x88\x09\x04\x00</Signature>
+            <Signature offset="12">\x00\x04\x09\x88</Signature>
+
+            <Signature>\x0a\x16\x6f\x72\x67\x2e\x6d\x75\x6c\x74\x69\x62\x69\x74\x2e\x77\x61\x6c\x6c\x65\x74</Signature>
+
+            <Signature>\x52\x4f\x4d\x52\x00\x00</Signature>
+
+            <Signature offset="8">\x00\x00\x00\x00\x62\x31\x05\x00\x09\x00\x00\x00\x00\x20\x00\x00\x00\x09\x00\x00\x00\x00\x00\x00</Signature>
+        </Begin>
+        <End combine="OR"/>
+    </FileType>
+    <FileType id="50002" group="Forensic Recovery" description="MultiBit Wallet" features="" extension="wallet">
+        <Begin combine="OR">
+            <Signature offset="0">\x0a\x16\x6f\x72\x67\x2e\x62\x69\x74\x63\x6f\x69\x6e\x2e\x70\x72</Signature>
+        </Begin>
+        <End combine="OR"/>
+    </FileType>
+</FileTypeList>
