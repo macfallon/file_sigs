@@ -1,1 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileTypeList version="2.0">
 
+    <!-- ============================================= -->
+    <!-- 1. Bitcoin Core wallet.dat (BDB format)       -->
+    <!-- ============================================= -->
+    <FileType id="50001" group="Other files" description="Bitcoin Core wallet.dat (2011-2013)" features="" extension="dat">
+        <Begin combine="OR">
+            <Signature>\x00\x05\x31\x62</Signature>
+            <Signature>\x62\x31\x05\x00</Signature>
+            <Signature>\x00\x06\x15\x61</Signature>
+            <Signature>\x61\x15\x06\x00</Signature>
+            <Signature offset="12">\x00\x05\x31\x62</Signature>
+            <Signature offset="12">\x62\x31\x05\x00</Signature>
+            <Signature offset="12">\x00\x06\x15\x61</Signature>
+            <Signature offset="12">\x61\x15\x06\x00</Signature>
+            <Signature offset="12">\x53\x22\x04\x00</Signature>
+            <Signature offset="12">\x00\x04\x22\x53</Signature>
+            <Signature offset="12">\x88\x09\x04\x00</Signature>
+            <Signature offset="12">\x00\x04\x09\x88</Signature>
+            <Signature>\x42\x65\x72\x64\x65\x6c\x65\x79\x20\x44\x42</Signature>
+            <Signature>\x77\x61\x6c\x6c\x65\x74\x2e\x64\x61\x74</Signature>
+            <Signature>\x6d\x6b\x65\x79</Signature>
+            <Signature>\x63\x6b\x65\x79</Signature>
+            <Signature>\x04\x6d\x6b\x65\x79</Signature>
+            <Signature>\x04\x63\x6b\x65\x79</Signature>
+            <Signature>\x03\x6b\x65\x79</Signature>
+            <Signature>\x6b\x65\x79\x70\x6f\x6f\x6c</Signature>
+            <Signature>\x64\x65\x66\x61\x75\x6c\x74\x6b\x65\x79</Signature>
+            <Signature>\x6e\x61\x6d\x65</Signature>
+        </Begin>
+        <End combine="OR"/>
+    </FileType>
+
+    <!-- ============================================= -->
+    <!-- 2. Electrum (v1/v2 early wallets)             -->
+    <!-- ============================================= -->
+    <FileType id="50002" group="Other files" description="Electrum wallet (2011-2013)" features="" extension="wallet">
+        <Begin combine="OR">
+            <Signature>\x7B\x22\x61\x64\x64\x72\x5F\x68\x69\x73\x74\x6F\x72\x79\x22\x3A</Signature>
+            <Signature>\x7B\x22\x73\x65\x65\x64\x22\x3A</Signature>
+            <Signature>\x7B\x22\x73\x65\x65\x64\x5F\x76\x65\x72\x73\x69\x4F\x6E\x22\x3A</Signature>
+            <Signature>\x7B\x22\x77\x61\x6C\x6C\x65\x74\x5F\x74\x79\x70\x65\x22\x3A</Signature>
+            <Signature>\x67\x41\x41\x41\x41\x41\x42</Signature>
+            <Signature>\x7B\x22\x65\x6E\x63\x72\x79\x70\x74\x65\x64\x22</Signature>
+            <Signature>\x65\x6c\x65\x63\x74\x72\x75\x6d\x2e\x64\x61\x74</Signature>
+            <Signature>\x64\x65\x66\x61\x75\x6c\x74\x5f\x77\x61\x6c\x6c\x65\x74</Signature>
+        </Begin>
+        <End combine="OR"/>
+    </FileType>
+
+    <!-- ============================================= -->
+    <!-- 3. Armory                                     -->
+    <!-- ============================================= -->
+    <FileType id="50003" group="Other files" description="Armory wallet (2011-2013)" features="" extension="wallet">
+        <Begin combine="OR">
+            <Signature>\xba\x57\x41\x4c\x4c\x45\x54</Signature>
+            <Signature>\xba\xbe\x00\x00</Signature>
+            <Signature>\x41\x52\x47\x59\x2d\x65\x6e\x63</Signature>
+            <Signature>\x06\x41\x52\x4d\x4f\x52\x59</Signature>
+            <Signature>\x4b\x44\x46\x5f\x52\x4f\x4d\x49\x58</Signature>
+            <Signature>\x43\x52\x59\x50\x54\x4f\x5f\x53\x43\x52\x59\x50\x54</Signature>
+            <Signature>\x45\x4e\x43\x52\x59\x50\x54\x45</Signature>
+        </Begin>
+        <End combine="OR"/>
+    </FileType>
+
+    <!-- ============================================= -->
+    <!-- 4. MultiBit Classic                           -->
+    <!-- ============================================= -->
+    <FileType id="50004" group="Other files" description="MultiBit Classic wallet (2011-2013)" features="" extension="wallet">
+        <Begin combine="OR">
+            <Signature>\x4d\x55\x4c\x54\x49\x42\x49\x54\x20</Signature>
+            <Signature>\x6d\x75\x6c\x74\x69\x62\x69\x74\x20\x63\x6c\x61\x73\x73\x69\x63</Signature>
+            <Signature>\x6f\x72\x67\x2e\x6d\x75\x6c\x74\x69\x62\x69\x74</Signature>
+            <Signature>\x0a\x16\x6f\x72\x67\x2e\x62\x69\x74\x63\x6f\x69\x6e\x2e\x70\x72\x6f\x64\x75\x63\x74\x69\x6f\x6e</Signature>
+            <Signature>\x2e\x77\x61\x6c\x6c\x65\x74</Signature>
+            <Signature>\x2e\x6b\x65\x79</Signature>
+            <Signature>\x6d\x75\x6c\x74\x69\x42\x69\x74\x2e\x69\x6e\x66\x6f</Signature>
+        </Begin>
+        <End combine="OR"/>
+    </FileType>
+
+    <!-- ============================================= -->
+    <!-- 5. Encrypted keys / PEM private keys          -->
+    <!-- ============================================= -->
+    <FileType id="50005" group="Other files" description="Encrypted / PEM private keys (2011-2013)" features="" extension="key">
+        <Begin combine="OR">
+            <Signature>\x53\x61\x6c\x74\x65\x64\x5f\x5f</Signature>
+            <Signature>\x55\x32\x46\x73\x64\x47\x56\x6b\x58\x31</Signature>
+            <Signature>\x2d\x2d\x2d\x2d\x2d\x42\x45\x47\x49\x4e\x20\x50\x52\x49\x56\x41\x54\x45\x20</Signature>
+            <Signature>\x2d\x2d\x2d\x2d\x2d\x42\x45\x47\x49\x4e\x20\x45\x43\x20\x50\x52\x49\x56\x41\x54\x45\x20</Signature>
+            <Signature>\x2d\x2d\x2d\x2d\x2d\x42\x45\x47\x49\x4e\x20\x52\x53\x41\x20\x50\x52\x49\x56\x41\x54\x45\x20\x4b\x45\x59</Signature>
+        </Begin>
+        <End combine="OR"/>
+    </FileType>
+
+    <!-- ============================================= -->
+    <!-- 6. Blockchain.info (2011-2013)                -->
+    <!-- ============================================= -->
+    <FileType id="50006" group="Other files" description="Blockchain.info wallet.aes.json (2011-2013)" features="" extension="json">
+        <Begin combine="OR">
+            <Signature>\x7B\x22\x67\x75\x69\x64\x22</Signature>          <!-- {"guid" -->
+            <Signature>\x22\x73\x68\x61\x72\x65\x64\x4B\x65\x79\x22</Signature>  <!-- "sharedKey" -->
+            <Signature>\x22\x64\x6F\x75\x62\x6C\x65\x5F\x65\x6E\x63\x72\x79\x70\x74\x69\x6F\x6E\x22</Signature> <!-- "double_encryption" -->
+            <Signature>\x7B\x22\x76\x65\x72\x73\x69\x6F\x6E\x22</Signature>  <!-- {"version" -->
+            <Signature>\x22\x63\x72\x79\x70\x74\x6F\x22</Signature>         <!-- "crypto" -->
+            <Signature>\x53\x61\x6C\x74\x65\x64\x5F\x5F</Signature>        <!-- Salted__ (older binary backups) -->
+        </Begin>
+        <End combine="OR"/>
+    </FileType>
+
+</FileTypeList>
